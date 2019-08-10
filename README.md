@@ -38,7 +38,7 @@ errorListener对请异常时进行处理。根据方法创建StringRequest对象
 ```
 5. JsonRequest的用法    
 JsonRequest用来解析Json数据，其中JsonObjetRequest返回的是单条Json数据，而JsonArrayRequest返回的是Json数组，用法和
-StringRequest类似，可以结合Gs使用lmageLoader加载图片on对返回的数据进行解析。
+StringRequest类似，可以结合Gson对返回的数据进行解析。
 6. 使用lmageLoader加载图片  
 ImageLoader 的内部使用 ImageRequest 来实现，它的构造方法可以传入一个 ImageCache缓存形参，实现图片缓存的功能。同时还可以过
 滤重复连接，避免重复发送请求。ImageLoader加载图片会先显示默认的图片，等待图片加载完成才会显示在ImageView上。
@@ -58,5 +58,5 @@ ImageLoader 的内部使用 ImageRequest 来实现，它的构造方法可以传
     ImageLoader.ImageListener listener = ImageLoader.getImageListener(imgView,R.drawable.ic_autorenew_black_24dp,R.drawable.ic_mood_bad_black_24dp);
     imageLoader.get(imgUrl,listener,200,200);
 ```  
-ImageLoader.getImageListener()第一个参数表示显示图片的ImageView，第二个参数表示加载图片时显示的图片，第三个参数表示失败时显示的图片。
+ImageLoader.getImageListener()第一个参数表示显示图片的ImageView，第二个参数表示加载图片时显示的图片，第三个参数表示失败时显示的图片。  
 imageLoader.get()方法最后两个参数表示最大的宽度和高度，也可以不传参数。
